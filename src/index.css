@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root:has(.no-doc-scroll) {
+  overflow: hidden;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding: 5rem;
+}
+
+body{
+  color: #01b3ef;
+
+}
+
+
+@layer components{
+
+  .about-link{
+    @apply border border-primary rounded-full p-2 text-primary h-[3rem] hover:text-dark-2 hover:bg-primary transition delay-100;
+  }
+
+  .navbar{
+
+    @apply fixed h-16 top-0 left-0 right-0 shadow-md z-30 shadow-secondary/25;
+  }
+
+  .hover-link {
+    @apply hover:underline hover:underline-offset-16;
+  }
+
+  .btn{
+
+    @apply px-6 py-3 rounded-md text-base text-center font-montserrat;
+  }
+
+  .btn-secondary{
+
+    @apply text-primary bg-dark-1 border border-primary hover:bg-primary hover:text-dark-1 transition delay-150
+  }
+
+  .form-input{
+
+    @apply py-2 px-3 my-2 bg-[#e8f0fe] text-black;
+  }
+}
+
+@layer utilities{
+
+  .about-p{
+    @apply text-white text-xl text-justify leading-6;
+  }
+
+  .padding-x{
+
+    @apply sm:px-16 px-8;
+
+  }
+
+  .nav-margin{
+
+    @apply h-[calc(100vh-4rem)];
+  }
+  
+
+
+}
+
+
+.shape-divider{
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: 5;
+}
+
+.shape-divider svg {
+  
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 55px;
+}
+
+.shape-divider .shape-fill {
+  fill: #0F2E3C;
+}

@@ -20,7 +20,7 @@ const Hero = () => {
                         UI/UX & Front-End Web Development.
                     </p>
                 </div>
-                <Button className="max-sm:w-full mt-5 md:mt-7" variant="primary" text={'View Resume'}/>
+                <Button className="max-sm:w-full mt-5 md:mt-7" variant="primary" text={'View Resume'} link={'/resume.pdf'}/>
             </div>
             <div className="absolute max-sm:left-0 max-sm:right-0 sm:top-0 sm:right-10   sm:bottom-0  top-10 z-2 pt-10 flex justify-center items-center">
                 <img className="w-[320px] sm:w-[35rem] object-contain" src={heroBG} alt="" />

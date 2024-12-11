@@ -4,7 +4,10 @@ const Button = ({variant = 'primary', text, className= '', link, onClick}) => {
     
     const openLink = () => {
         if (link) {
+            console.log('link passed:', link);
+
             window.open(link, '_blank');
+
         }else{
 
             window.open(link, '_self');
